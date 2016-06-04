@@ -1,0 +1,12 @@
+{
+    "name": "vendor/package",
+    "authors": [
+        {
+            "name": "Masoom",
+            "email": "masoom2206@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "0.7.*@dev"
+    }
+}
