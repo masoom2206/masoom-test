@@ -10,11 +10,11 @@ use Symfony\Component\Routing\RouteCollection;
 class RouteSubscriber extends RouteSubscriberBase {
 
   /**
-   * {@inheritdoc}
+   * Callback function alterRoutes()
+   * to alter the admin form site info
    */
   protected function alterRoutes(RouteCollection $collection) {
     if ($route = $collection->get('system.site_information_settings')) 
       $route->setDefault('_form', 'Drupal\site_api\Form\ExtendedSiteInformationForm');
   }
-
 }

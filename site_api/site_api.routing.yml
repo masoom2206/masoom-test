@@ -1,13 +1,12 @@
-site_api.page_json:
-  path: '/page_json/{siteapikey}/{node}'
+site_api.jsonpagedata:
+  path: '/page_json/{siteapi}/{node}'
   defaults:
-    _controller: '\Drupal\site_api\Controller\SiteAPIController::getPageJson'
-    _title: 'Page JSON'
+    _controller: '\Drupal\site_api\Controller\ExportPagesController::jsonpagedata'
+    _title: 'Export pages'
   options:
     parameters:
-      siteapikey:
+      siteapi: ''
       node:
         type: entity:node
-    no_cache: 'TRUE'
   requirements:
-    _access: 'TRUE'
+    _custom_access: '\Drupal\site_api\Controller\ExportPagesController::jsonpagedataaccess'
